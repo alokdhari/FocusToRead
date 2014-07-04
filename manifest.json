@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "Focus To Read",
+  "description": "This extension helps you read articles by focussing on the item you hover on.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "FocusToRead.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["jquery-1.11.1.min.js","focustoread.js"],
+	  "css": ["focustoread.css"]
+    }
+  ],  
+  "web_accessible_resources": ["jquery-1.11.1.min.js", "focustoread.js", "focustoread.css"]
+}
